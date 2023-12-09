@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>Gastos Diarios</h2>
+    <div class="container">
+      <button class="btnAddItem">+</button>
+      <form id="form" class="hidden">
+        <div class="form__input-row">
+          <select class="form__element form__select" id="categoria">
+            <option>Comida</option>
+            <option>Transporte</option>
+            <option>Salud</option>
+            <option>Educación</option>
+            <option>Entretenimiento</option>
+          </select>
+          <input class="form__element form__textbox" type="number" id="cantidad" placeholder="0.0" required>
+        </div>
+        <textarea class="form__element form__textarea" id="desc" rows="3"></textarea>
+        <div class="form__btn-row">
+          <button class="form__element form__btn form__btn--save" type="submit">Guardar</button>
+          <button class="form__element form__btn form__btn--cancel" type="button">Cancelar</button>
+        </div>
+      </form>
+
+      <ul id="listaGastos" class="expense-list">
+      </ul>
+      <h5 id="total">Total $0.00</h5>
+      <button class="clearList"><i class="bi bi-trash"></i></button>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
